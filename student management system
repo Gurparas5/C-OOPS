@@ -1,0 +1,35 @@
+#include<iostream>
+using namespace std;
+class student{
+    private:
+        string name;
+        int age;
+        float CGPA;
+    public:
+    student(string n , int a , float c) : name(n) , age(a) , CGPA(c){}
+        void setData(string n , int a , float c){
+            name = n;
+            age = a;
+            CGPA = c;
+    }
+    void showData(){
+        cout<<"Name : "<<name<<endl;
+        cout<<"Age : "<<age<<endl;
+        cout<<"CGPA : "<<CGPA<<endl;
+    }
+    string getName(){
+        return name;
+    }
+    int getAge(){
+        return age;
+    }
+    float getCGPA(){
+        return CGPA;
+    }
+};
+int main(){
+    student s1("Adheesh" , 19 , 7.5);
+    cout<<"Details of Student Adheesh are as follows: "<<endl;
+    s1.showData();
+    return 0;
+}
